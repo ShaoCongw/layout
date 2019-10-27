@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- 双飞翼布局 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>双飞翼布局</title>
+    <style>
+        /* 通过float center-padding方式实现 */
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            color: #fff;
+            height: 100%;
+            min-width: 500px;
+        }
+        /* #center {
+            padding: 0 200px;
+            width: 100%;
+            height: 100%;
+            background-color: #007AAE;
+            float: left;
+            box-sizing: border-box; */
+            /*
+                通过padding实现的方式要注意盒子模型为boeder-box，将左右内边距包括进去
+                
+            */
+        /* }
+        #left {
+            width: 200px;
+            height: 100%;
+            float: left;
+            background-color: #F8A1A4;
+            margin-left: -100%;
+        }
+        #right {
+            width: 200px;
+            height: 100%;
+            float: left;
+            background-color: #FFB27D;
+            margin-left: -200px;
+        } */
+
+        /* 通过float center div中间再嵌套一个ininer div */
+        /* #center,
+        #left,
+        #right {
+            float: left;
+            height: 100%;
+        }
+
+        #center {
+            width: 100%;
+            background-color: #007AAE;
+            
+        }
+        #inner {
+            margin: 0 200px;
+            background-color:  #007AAE;
+        }
+        #left {
+            width: 200px;
+            background-color: #F8A1A4;
+            margin-left: -100%;
+        }
+        #right {
+            width: 200px;
+            background-color: #FFB27D;
+            margin-left: -200px;
+        } */
+
+        /* 通过自身浮动法，只有left和right浮动 */
+        /* #left,
+        #right {
+            height: 100%;
+            width: 200px;
+            background-color: #F8A1A4;
+            float: right;
+        }
+        #left {
+            float: left;
+            width: 200px;
+            background-color: #FFB27D;
+            
+        }
+        #center {
+            margin: 0 200px;
+            height: 100%;
+            background-color:  #007AAE;
+        } */
+
+        /* 通过position绝对定位实现 */
+        #center {
+            margin: 0 200px;
+            height: 100%;
+            background-color:  #007AAE;
+        } 
+        #left,
+        #right {
+            height: 100%;
+            width: 200px;
+            position: absolute;
+            top: 0;
+        }
+        #left {
+            
+            left: 0;
+            background-color: #FFB27D;
+        }
+        #right {
+            right: 0;
+            background-color: #F8A1A4;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div id = "center">
+        <div id = "inner">inner</div>
+    </div> -->
+    <div id = "left">left</div>
+    <div id = "right">right</div>
+    <div id = "center">center</div>
+</body>
+</html>

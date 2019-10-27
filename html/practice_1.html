@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--实现一个两栏布局，左侧占30%宽度，右侧占70%宽度-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            height: 100%;
+            color: #ffffff;
+        }
+        /* 通过float方式实现 */
+        /* #left {
+           width: 30%;
+           height: 100%;
+           float: left; 
+           background-color: #F8A1A4;
+        }
+        #right {
+            width: 70%;
+            height: 100%;
+            float: right;
+            background-color: #FFB27D;
+        } */
+
+        /* 通过position方式实现 */
+        /* #left {
+            width:30%;
+            height:100%;
+            background-color: #F8A1A4;
+            
+        }
+        #right {
+            width:70%;
+            height:100%;
+            background-color: #FFB27D;
+            position: absolute;
+            right: 0;
+            top: 0;
+        } */
+
+        /* 通过flexbox实现 */
+        #flexbox {
+            display: flex;
+            height: 100%;
+        }
+        #left {
+            
+            background-color: #F8A1A4; 
+            flex: 3;
+        }
+        #right {
+            
+            background-color: #FFB27D;
+            flex: 7;
+        }
+
+    </style>
+</head>
+<body>
+    <div id = "flexbox">
+        <div id = "left">左侧部分</div>
+        <div id = "right">右侧部分</div>
+    </div>
+</body>
+</html>

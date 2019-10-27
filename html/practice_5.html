@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实现一个三栏布局，左侧固定宽度，中间固定宽度，右侧根据浏览器宽度变化而自适应变化</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            color: #fff;
+            min-width: 500px;
+        }
+        /* 通过float方式实现 */
+        /* #left,
+        #center {
+            width: 200px;
+            height: 100%;
+            float: left;
+        }
+        #left {
+            background-color: #FFB27D;
+        }
+        #center {
+            background-color:  #007AAE;
+        }
+        #right {
+            height: 100%;
+            background-color: #F8A1A4;
+            margin-left: 400px;
+        } */
+
+        /* 通过position方式实现 */
+        #left,
+        #center {
+            width: 200px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+        #left {
+            left: 0;
+            background-color: #FFB27D;
+        }
+        #center {
+            left: 200px;
+            background-color:  #007AAE;
+        }
+        #right {
+            height: 100%;
+            background-color: #F8A1A4;
+            margin-left: 400px;
+        } 
+    </style>
+</head>
+<body>
+    <div id = "left">left</div>
+    <div id = "center">center</div> 
+    <div id = "right">right</div>
+</body>
+</html>

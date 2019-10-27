@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<!-- 实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实现一个两栏布局，左侧固定宽度，右侧根据浏览器宽度进行自适应变化</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            margin: 0;
+            min-width: 300px;
+            color: #fff;
+        }
+        /* 通过float实现 */
+        /* #left {
+            width: 200px;
+            height: 100%;
+            background-color: #F8A1A4;
+            float: left;
+        }
+        #right {
+            margin-left: 200px;
+            height: 100%;
+            background-color: #FFB27D;
+            overflow: hidden;
+        } */
+
+        /* 通过position实现 */
+        #left {
+            width: 200px;
+            height: 100%;
+            background-color: #F8A1A4;
+            
+            
+        }
+        #right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc(100% - 200px); /*注意calc括号中中减号两年要留空格*/
+            height: 100%;
+            background-color: #FFB27D; 
+            /*
+                另一种方法，设left绝对定位，right直接margin-left：200px
+            */
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div id = "left">左侧部分</div>
+    <div id = "right">右侧部分</div>
+    
+            
+</body>
+</html>
